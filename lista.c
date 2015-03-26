@@ -1,9 +1,11 @@
+//aquí especifico mis funciones
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
 #include "lista.h"
 
+//para hacer un nuevo nodo
 Node * newNode(int val){
 	Node * nodo = (Node *) malloc(sizeof(Node));
 	assert(nodo != NULL);
@@ -12,6 +14,7 @@ Node * newNode(int val){
 	return nodo;
 }
 
+//para la length de la iteración 
 int len_iter(Node * nodo){
 	int count;
 	if (nodo == NULL){
@@ -25,6 +28,7 @@ int len_iter(Node * nodo){
 	return count;
 }
 
+//para la length del recursivo
 int len_rec(Node * nodo){
 	if (nodo == NULL)
 		return 0;
@@ -32,6 +36,7 @@ int len_rec(Node * nodo){
 		return 1 + len_rec(nodo->next);
 }
 
+//encuentra el valor máximo de la lista
 int max(Node * nodo){ //nodo es un apuntador hacia un elemento del tipo Node
 	int max;
 	if (nodo == NULL){
@@ -47,6 +52,7 @@ int max(Node * nodo){ //nodo es un apuntador hacia un elemento del tipo Node
 	return max;
 }
 
+//encuentra la lista inversa
 Node * inversa(Node * nodo){
 	Node * inversa = NULL; //inversa es el apuntador hacia una lista (lista que será la inversa de la original)
 	while(nodo != NULL){
@@ -58,6 +64,7 @@ Node * inversa(Node * nodo){
 	return inversa;
 }
 
+//imprime una lista
 void printList(Node * list){
 	if(list != NULL){
 		printf("[");

@@ -1,3 +1,4 @@
+//mi main
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,6 +13,7 @@ int main(){
 		list = n;
 	}
 
+//impresión de las funciones
 	printf("length de iteración es %d \n", len_iter(list));
 	printf("length de recursión es %d \n", len_rec(list));
 	printf("max de la lista es %d \n", max(list));
@@ -19,10 +21,9 @@ int main(){
 	printList(inversa(list));
 
 //borro la memoria
-
 	Node * nodoAux;
 	while (list != NULL){
-		nodoAux = list->next; //
+		nodoAux = list->next;
 		free(list);
 		list = nodoAux;
 	}	

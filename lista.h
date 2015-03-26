@@ -1,10 +1,13 @@
+//headers
 
-typedef struct Node {
+
+typedef struct Node { //mi nodo
 	int val;
 	struct Node * next;
 } Node;
 
 
+//funciones para mi nodo
 
 Node * newNode(int val);
 
